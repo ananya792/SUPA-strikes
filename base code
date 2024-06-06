@@ -1,0 +1,86 @@
+import pygame
+import sys
+import time
+import math
+import random
+from pygame.locals import *
+
+pygame.init()  # initialize pygame
+pygame.font.init()
+pygame.mixer.init()
+clock = pygame.time.Clock()
+bg = pygame.image.load(r'C:\Users\ADMIN\Downloads\2.png')
+back = pygame.image.load(r'C:\Users\ADMIN\Downloads\WhatsApp Image 2024-05-31 at 15.54.15.jpeg')
+p1 = pygame.image.load(r'C:\Users\ADMIN\Downloads\7.jpeg')
+gk1 = pygame.image.load(r'C:\Users\ADMIN\Downloads\7.jpeg')
+p2 = pygame.image.load(r'C:\Users\ADMIN\Downloads\8.jpeg')
+gk2 = pygame.image.load(r'C:\Users\ADMIN\Downloads\8.jpeg')
+b = pygame.image.load(r'C:\Users\ADMIN\Downloads\9.gif')
+bg_size = bg.get_size()
+gk2_rect = gk2.get_rect()
+gk1_rect = gk1.get_rect()
+gk2_x = 949
+gk2_y = 303
+gk1_x = 43
+gk1_y = 309
+gk2_rect.center = gk2_x, gk2_y
+gk1_rect.center = gk1_x, gk1_y
+screen = pygame.display.set_mode([bg_size[0], bg_size[1] + 50])
+pygame.display.set_caption('SoccerLeague')
+back_rect = back.get_rect()
+back_rect.center = 500, 250
+screen.blit(back, back_rect)
+pygame.display.update()
+g2_x = 988
+g2_y = 300
+you_g = cpu_g = 0
+white = (255, 255, 255)
+red = (0, 0, 128)
+black = (0, 0, 0)
+control = 2
+arg = 0
+g1_x = g1_y = 0
+collected_gk1 = 0
+collected_gk2 = 0
+img_1 = 0
+kick = 0
+p1_x = 417
+p1_y = 308
+b_x = 498
+b_y = 308
+p2_x = 800
+p2_y = 308
+dim_x1 = 25
+dim_y1 = 20
+dim_x2 = 970
+dim_y2 = 596
+g2_x = 988
+g2_y = 300
+move_x = move_y = 0
+b_rect = b.get_rect()
+p1_rect = p1.get_rect()
+p2_rect = p2.get_rect()
+b_rect.center = b_x, b_y
+p1_rect.center = p1_x, p1_y
+p2_rect.center = p2_x, p2_y
+connect = 0
+prev = new = 0
+pk = 1
+r = (200, 0, 0)
+green = (0, 200, 0)
+orange = (255, 127, 0)
+grey = (50, 50, 50)
+bright_r = (255, 0, 0)
+bright_green = (0, 255, 0)
+bright_orange = (255, 215, 0)
+
+# Define your functions here
+
+# Main game loop
+while True:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+    # Implement your game logic here
+    pygame.display.update()
